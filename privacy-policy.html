@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave App - Privacy Policy</title>
+    <style>
+        :root {
+            --bg-primary: #f5f5f7;
+            --bg-card: #fff;
+            --text-primary: #1d1d1f;
+            --text-secondary: #374151;
+            --text-muted: #6b7280;
+            --accent: #4f46e5;
+            --accent-light: #6366f1;
+            --border: #e5e7eb;
+            --shadow: rgba(0, 0, 0, 0.08);
+            --header-bg: linear-gradient(135deg, #4f46e5, #6366f1);
+            --header-text: #fff;
+            --toggle-bg: rgba(255, 255, 255, 0.2);
+            --toggle-hover: rgba(255, 255, 255, 0.3);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #111827;
+            --bg-card: #1f2937;
+            --text-primary: #f3f4f6;
+            --text-secondary: #d1d5db;
+            --text-muted: #9ca3af;
+            --accent: #818cf8;
+            --accent-light: #a5b4fc;
+            --border: #374151;
+            --shadow: rgba(0, 0, 0, 0.3);
+            --header-bg: linear-gradient(135deg, #3730a3, #4338ca);
+            --header-text: #f3f4f6;
+            --toggle-bg: rgba(255, 255, 255, 0.1);
+            --toggle-hover: rgba(255, 255, 255, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header {
+            background: var(--header-bg);
+            color: var(--header-text);
+            padding: 48px 24px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: var(--toggle-bg);
+            border: none;
+            color: var(--header-text);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .theme-toggle:hover {
+            background: var(--toggle-hover);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 32px 24px 64px;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .section {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 28px 32px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px var(--shadow);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        .section p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 12px;
+        }
+
+        .section ul li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            padding: 4px 0 4px 20px;
+            position: relative;
+        }
+
+        .section ul li::before {
+            content: "\2022";
+            color: var(--accent);
+            font-size: 18px;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        .section a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .section a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 32px 24px;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+            margin-top: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 36px 16px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+
+            .container {
+                padding: 24px 16px 48px;
+            }
+
+            .section {
+                padding: 20px 20px;
+            }
+
+            .theme-toggle {
+                top: 12px;
+                right: 12px;
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#9790;</button>
+        <h1>Leave App</h1>
+        <p>Privacy Policy & Terms of Service</p>
+    </div>
+
+    <div class="container">
+        <p class="last-updated">Last updated: January 2026</p>
+
+        <!-- Privacy Policy -->
+        <div class="section">
+            <h2>Privacy Policy</h2>
+            <p>Leave App ("we", "our", or "us") is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your information.</p>
+
+            <h3>Information We Collect</h3>
+            <p>We collect only the information necessary to provide our leave management service:</p>
+            <ul>
+                <li>Name and email address (for your account)</li>
+                <li>Leave request details (type, dates, reason)</li>
+                <li>Company affiliation and role (employee or manager)</li>
+            </ul>
+
+            <h3>How We Use Your Information</h3>
+            <ul>
+                <li>To manage and process leave requests within your organization</li>
+                <li>To send in-app notifications about leave request updates</li>
+                <li>To maintain accurate leave balances</li>
+                <li>To enable manager-employee relationships within your company</li>
+            </ul>
+
+            <h3>Data Storage</h3>
+            <p>All data is stored securely on Google Firebase infrastructure (Cloud Firestore and Firebase Authentication). Your password is hashed and never stored in plain text.</p>
+
+            <h3>No Tracking or Analytics</h3>
+            <p>We do not use any analytics, advertising, or behavioral tracking tools. We do not track your usage patterns, location, or browsing activity.</p>
+
+            <h3>Data Isolation</h3>
+            <p>Your company's data is completely isolated from other companies. Managers can only view data for employees within their own organization.</p>
+
+            <h3>Data Retention</h3>
+            <p>Your account data is retained as long as your account is active. Leave request history is preserved for organizational audit purposes. You may delete your account at any time through the Edit Profile screen.</p>
+        </div>
+
+        <!-- Terms of Service -->
+        <div class="section">
+            <h2>Terms of Service</h2>
+            <p>By using Leave App, you agree to the following terms:</p>
+
+            <h3>Account Responsibilities</h3>
+            <ul>
+                <li>You are responsible for maintaining the security of your account credentials.</li>
+                <li>You must provide accurate information during registration.</li>
+                <li>You must not share your account with others.</li>
+            </ul>
+
+            <h3>Acceptable Use</h3>
+            <ul>
+                <li>Use the app only for legitimate leave management within your organization.</li>
+                <li>Do not submit fraudulent leave requests or manipulate leave balances.</li>
+                <li>Managers must handle leave approvals fairly and in accordance with their company policies.</li>
+            </ul>
+
+            <h3>Roles and Permissions</h3>
+            <ul>
+                <li>Employees can submit leave requests, view their balance, and track request status.</li>
+                <li>Managers can approve or reject requests, manage team leave balances, and configure company leave policies.</li>
+                <li>Managers are responsible for verifying employees who join their company.</li>
+            </ul>
+
+            <h3>Service Availability</h3>
+            <ul>
+                <li>We strive to maintain service availability but do not guarantee uninterrupted access.</li>
+                <li>We may update, modify, or discontinue features with reasonable notice.</li>
+            </ul>
+
+            <h3>Account Termination</h3>
+            <ul>
+                <li>You may delete your account at any time through the Edit Profile screen.</li>
+                <li>We reserve the right to suspend accounts that violate these terms.</li>
+            </ul>
+
+            <h3>Limitation of Liability</h3>
+            <p>Leave App is provided "as is" without warranties of any kind. We are not liable for decisions made based on leave data within the app.</p>
+        </div>
+
+        <!-- Data We Collect -->
+        <div class="section">
+            <h2>Data We Collect</h2>
+            <p>Here is a complete list of data stored by Leave App:</p>
+
+            <h3>Account Information</h3>
+            <ul>
+                <li>Full name</li>
+                <li>Email address</li>
+                <li>Encrypted password (managed by Firebase Auth)</li>
+                <li>User role (employee or manager)</li>
+                <li>Account creation date</li>
+                <li>Manager verification status</li>
+            </ul>
+
+            <h3>Company Data</h3>
+            <ul>
+                <li>Company name and ID</li>
+                <li>Manager-employee relationships</li>
+                <li>Company leave policy settings (default CL, SL, PL balances)</li>
+            </ul>
+
+            <h3>Leave Records</h3>
+            <ul>
+                <li>Leave type (Casual, Sick, Privilege)</li>
+                <li>Start and end dates</li>
+                <li>Reason for leave</li>
+                <li>Approval status and manager comments</li>
+                <li>Current leave balances</li>
+            </ul>
+
+            <h3>Notifications</h3>
+            <ul>
+                <li>In-app notification messages (leave updates, approvals, rejections)</li>
+                <li>Read/unread status</li>
+            </ul>
+
+            <h3>Local Device Storage</h3>
+            <ul>
+                <li>Authentication session token (for keeping you logged in)</li>
+                <li>Cached app state (for faster loading)</li>
+                <li>Theme preference (light, dark, or system)</li>
+            </ul>
+        </div>
+
+        <!-- Your Rights -->
+        <div class="section">
+            <h2>Your Rights</h2>
+            <p>You have the following rights regarding your data:</p>
+
+            <h3>Access Your Data</h3>
+            <ul>
+                <li>View your profile information in the Edit Profile screen.</li>
+                <li>View all your leave requests in the History tab.</li>
+                <li>View your current leave balances on the Dashboard.</li>
+            </ul>
+
+            <h3>Update Your Data</h3>
+            <ul>
+                <li>Change your display name in Edit Profile.</li>
+                <li>Change your password in Edit Profile.</li>
+            </ul>
+
+            <h3>Delete Your Data</h3>
+            <ul>
+                <li>Delete your entire account through the Edit Profile screen.</li>
+                <li>Account deletion removes your profile data and authentication credentials permanently.</li>
+                <li>Note: Leave request history may be retained for your company's audit records.</li>
+            </ul>
+
+            <h3>Data Portability</h3>
+            <ul>
+                <li>You can view all your leave history within the app.</li>
+                <li>Contact your company administrator for data export requests.</li>
+            </ul>
+        </div>
+
+        <!-- Third-Party Services -->
+        <div class="section">
+            <h2>Third-Party Services</h2>
+            <p>Leave App uses the following third-party services:</p>
+
+            <h3>Firebase Authentication (Google)</h3>
+            <ul>
+                <li>Handles secure user registration and login.</li>
+                <li>Manages password hashing and session tokens.</li>
+                <li>Privacy policy: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">firebase.google.com/support/privacy</a></li>
+            </ul>
+
+            <h3>Cloud Firestore (Google)</h3>
+            <ul>
+                <li>Stores all application data (profiles, leave requests, notifications).</li>
+                <li>Data is encrypted in transit and at rest.</li>
+                <li>Hosted on Google Cloud infrastructure.</li>
+            </ul>
+
+            <h3>Expo (Expo Inc.)</h3>
+            <ul>
+                <li>Used for app development and distribution.</li>
+                <li>No user data is shared with Expo.</li>
+            </ul>
+
+            <h3>What We Do NOT Use</h3>
+            <ul>
+                <li>No advertising SDKs or ad networks</li>
+                <li>No analytics or tracking tools</li>
+                <li>No social media integrations</li>
+                <li>No third-party data brokers</li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>If you have questions about our privacy practices, terms of service, or your data, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@leaveonly.app">support@leaveonly.app</a></p>
+            <p>We aim to respond to all inquiries within 48 hours.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 Leave App. All rights reserved.
+    </div>
+
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        function setTheme(theme) {
+            html.setAttribute('data-theme', theme);
+            toggle.innerHTML = theme === 'dark' ? '&#9728;' : '&#9790;';
+            localStorage.setItem('theme', theme);
+        }
+
+        // Check saved preference, then system preference
+        const saved = localStorage.getItem('theme');
+        if (saved) {
+            setTheme(saved);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setTheme('dark');
+        }
+
+        toggle.addEventListener('click', function () {
+            const current = html.getAttribute('data-theme');
+            setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+            if (!localStorage.getItem('theme')) {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    </script>
+</body>
+</html>
